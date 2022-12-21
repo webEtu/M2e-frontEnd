@@ -1,8 +1,5 @@
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link text-light fs-4">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-light fs-4">général</a>
+<ul class="nav flex-column" *ngIf="collection$ |async as collection">
+  <li class="nav-item" *ngFor="let channel of collection">
+    <a class="nav-link text-light fs-4">{{channel.title}}</a>
   </li>
 </ul>
