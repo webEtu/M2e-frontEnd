@@ -3,8 +3,8 @@ import { User } from "./user";
 
 export class Channel implements ChannelI {
   id!: number;
-  user!: User;
+  user = new User();
   title!: string;
   description!: string;
-  has_news!: boolean;
+  has_news = true;
 }
