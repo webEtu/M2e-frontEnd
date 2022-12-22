@@ -1,5 +1,12 @@
 <ul class="nav flex-column" *ngIf="collection$ |async as collection">
   <li class="nav-item" *ngFor="let channel of collection">
-    <a class="nav-link text-light fs-4">{{channel.title}}</a>
+    <a class="nav-link text-light fs-4 chan">{{channel.title}}</a>
   </li>
 </ul>
+
+<div class="d-flex">
+  <a class="nav-link text-light fs-5 btn" routerLink="channels/add">+</a>
+  <a class="nav-link text-light fs-5 btn" routerLink="channels/rmv">-</a>
+  <a class="nav-link text-light fs-5 btn" routerLink="channels/edit">E</a>
+</div>
+

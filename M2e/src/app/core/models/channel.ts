@@ -6,5 +6,5 @@ export class Channel implements ChannelI {
   user = new User();
   title!: string;
   description!: string;
-  has_news = true;
+  has_news = false;
 }

@@ -2,3 +2,19 @@
   font-weight: bolder;
   font-size: 3em;
 }
+
+.del {
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.chan {
+  padding-left: 30px;
+}
+
+.chan:hover {
+  background-color: var(--app-primary)
+}

@@ -1,10 +1,14 @@
 header {
   background: var(--app-primary);
 }
-nav {
+aside {
   background: var(--app-secondary);
+  width: 250px;
 }
 main {
-  height: 100vh;
   background: var(--app-dark);
+}
+
+.ui {
+  height: 100vh;
 }
