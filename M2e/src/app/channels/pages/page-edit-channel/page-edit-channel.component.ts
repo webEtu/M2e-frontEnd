@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Channel } from 'src/app/core/models/channel';
 import { ChannelsService } from 'src/app/core/services/channels.service';
 
@@ -11,8 +11,8 @@ import { ChannelsService } from 'src/app/core/services/channels.service';
 export class PageEditChannelComponent {
   public chan: Channel;
 
-  constructor(private channelsService: ChannelsService, private router: Router) {
-    this.chan = new Channel();
+  constructor(private channelsService: ChannelsService, private router: Router, private activatedRoute: ActivatedRoute) {
+    this.chan = new Channel;
   }
 
   public action(chan: Channel): void {
