@@ -1,6 +1,6 @@
 <ul class="nav flex-column" *ngIf="collection$ |async as collection">
   <li class="nav-item d-flex" *ngFor="let channel of collection">
-    <a class="nav-link text-light fs-4 chan">{{channel.title}}</a>
+    <a class="nav-link text-light fs-4 chan" routerLink="messages/{{channel.id}}">{{channel.title}}</a>
     <ng-container *ngIf="channel.id==1; then thenBlock else elseBlock"></ng-container>
 
     <ng-template #thenBlock>
