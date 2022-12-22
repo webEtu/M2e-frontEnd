@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormEditComponent } from './form-edit.component';
+import { IconDeleteComponent } from './icon-delete.component';
 
-describe('FormEditComponent', () => {
-  let component: FormEditComponent;
-  let fixture: ComponentFixture<FormEditComponent>;
+describe('IconDeleteComponent', () => {
+  let component: IconDeleteComponent;
+  let fixture: ComponentFixture<IconDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormEditComponent ]
+      declarations: [ IconDeleteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormEditComponent);
+    fixture = TestBed.createComponent(IconDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

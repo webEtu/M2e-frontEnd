@@ -1,12 +1,16 @@
 <ul class="nav flex-column" *ngIf="collection$ |async as collection">
-  <li class="nav-item" *ngFor="let channel of collection">
+  <li class="nav-item d-flex" *ngFor="let channel of collection">
     <a class="nav-link text-light fs-4 chan">{{channel.title}}</a>
+    <ng-container *ngIf="channel.id==1; then thenBlock else elseBlock"></ng-container>
+
+    <ng-template #thenBlock>
+    </ng-template>
+
+    <ng-template #elseBlock>
+      <app-icon-new class="icon" routerLink="channels/edit/{{channel.id}}"></app-icon-new>
+      <app-icon-delete class="icon" (click)="onDeleteChannel(channel.id)"></app-icon-delete>
+    </ng-template>
+
   </li>
 </ul>
-
-<div class="d-flex">
-  <a class="nav-link text-light fs-5 btn" routerLink="channels/add">+</a>
-  <a class="nav-link text-light fs-5 btn" routerLink="channels/rmv">-</a>
-  <a class="nav-link text-light fs-5 btn" routerLink="channels/edit">E</a>
-</div>
-
+<a class="nav-link text-light fs-4 btn" routerLink="channels/add">+</a>

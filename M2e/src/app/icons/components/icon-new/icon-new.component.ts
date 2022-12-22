@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon-new',
@@ -11,6 +11,6 @@ export class IconNewComponent {
   public myIcon: IconDefinition;
 
   constructor() {
-    this.myIcon = faPlus;
+    this.myIcon = faPen;
   }
 }
