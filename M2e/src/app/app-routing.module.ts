@@ -12,7 +12,12 @@ const routes: Routes = [
     path: 'channels',
     loadChildren: () =>
       import('./channels/channels.module').then((m) => m.ChannelsModule),
-  }
+  },
+  {
+    path: 'not-found',
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
+  },
+  { path: '**', redirectTo: 'not-found', pathMatch: 'full'}
 ];
 
 @NgModule({
