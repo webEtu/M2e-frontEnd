@@ -24,6 +24,10 @@ export class ChannelsService {
     })
    }
 
+   public getChannelByID(id: number): Observable<Channel> {
+      return this.httpClient.get<Channel>(this.urlApi)
+   }
+
    public add(chan: Channel): Observable<Channel> {
     return this.httpClient.post<Channel>(`${this.urlApi}`, chan).pipe(
       tap(() => {

@@ -21,7 +21,7 @@ export class FormChannelComponent {
     private formBuilder: FormBuilder
   ) {
     this.submitted = new EventEmitter<Channel>();
-    this.users$ = this.usersService.collection$
+    this.users$ = this.usersService.collection$;
   }
 
   ngOnInit(): void {
@@ -32,9 +32,11 @@ export class FormChannelComponent {
       }),
       description: [this.init.description],
     });
+    console.log(this.form.value);
   }
 
   public onSubmit(): void {
+    console.log(this.form.value);
     this.submitted.emit(this.form.value);
   }
 }
